@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const form=document.querySelector('form');if(!form)return;form.onsubmit=async e=>{e.preventDefault();const data=Object.fromEntries(new FormData(form));try{await api('/auth/'+form.dataset.action,{method:'POST',body:JSON.stringify(data)});location.href='dashboard.html'}catch(e){message.textContent=e.message}}})
