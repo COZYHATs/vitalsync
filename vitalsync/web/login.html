@@ -1,1 +1,64 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Sign in · VitalSync</title><link rel="stylesheet" href="css/global.css"></head><body><main style="max-width:420px"><h1>VitalSync</h1><div class="card"><h2>Sign in</h2><form data-action="login"><label>Email<input name="email" type="email" required></label><label>Password<input name="password" type="password" required></label><p id="message"></p><button>Sign in</button></form><p class="muted">New here? <a href="register.html">Create account</a></p></div></main><script src="js/api.js"></script><script src="js/auth.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in · VitalSync</title>
+    <link rel="stylesheet" href="css/global.css">
+  </head>
+  <body>
+    <div class="auth-shell">
+      <div class="auth-layout">
+        <section class="auth-copy">
+          <div class="brand">
+            <div class="brand-mark">V</div>
+            <span>VitalSync</span>
+          </div>
+          <div>
+            <h1>Welcome back.</h1>
+            <p>Continue managing patient records, uploaded documents, and review workflows.</p>
+          </div>
+          <div class="feature-stack">
+            <div class="feature-item">
+              <div class="brand-mark" style="width:2rem;height:2rem; font-size:0.9rem;">✓</div>
+              <div>
+                <strong>Secure patient views</strong>
+                <span>Each workspace stays scoped to the authenticated user.</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="brand-mark" style="width:2rem;height:2rem; font-size:0.9rem;">+</div>
+              <div>
+                <strong>Modern review flow</strong>
+                <span>Track uploads, deletion requests, and status changes in one place.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="auth-panel">
+          <div class="form-card">
+            <h1 style="margin:0 0 1rem; font-size: clamp(1.8rem, 3vw, 2.4rem);">Sign in</h1>
+            <form data-action="login">
+              <label>Email
+                <input name="email" type="email" required placeholder="you@example.com">
+              </label>
+              <label>Password
+                <input name="password" type="password" required placeholder="Enter your password">
+              </label>
+              <p id="message"></p>
+              <div class="form-actions">
+                <button type="submit">Sign in</button>
+                <span class="inline-note">Need an account? <a href="register.html">Create one</a></span>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
+

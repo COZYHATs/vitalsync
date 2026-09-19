@@ -1,3 +1,6 @@
 const API='/api';
 async function api(path,opts={}){const r=await fetch(API+path,{credentials:'same-origin',...opts,headers:{...(opts.body instanceof FormData?{}:{'Content-Type':'application/json'}),...(opts.headers||{})}});if(r.status===204)return null;const body=await r.json().catch(()=>({}));if(!r.ok)throw new Error(body.error?.message||'Request failed');return body}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function statusClass(status=''){const key=String(status||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');if(!key)return 'status-ready';if(key.includes('pending'))return 'status-pending';if(key.includes('approved')||key.includes('ready')||key.includes('success'))return 'status-ready';if(key.includes('rejected')||key.includes('deletion-requested')||key.includes('deleted'))return 'status-deletion-requested';if(key.includes('failed'))return 'status-failed';return 'status-ready'}
+function statusLabel(status=''){return String(status||'').replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}
+function setMessage(text,kind='error'){const el=document.getElementById('message');if(!el)return;el.textContent=text||'';el.classList.toggle('success',kind==='success');el.classList.toggle('error',kind==='error');}

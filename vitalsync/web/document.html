@@ -1,1 +1,49 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Document · VitalSync</title><link rel="stylesheet" href="css/global.css"></head><body><header><strong>VitalSync</strong><nav><a href="documents.html">Documents</a></nav></header><main><div class="card"><h1 id="name">Document</h1><div id="detail"></div><p><a id="view" class="button" target="_blank">View document</a> <button class="danger" id="request">Request deletion</button></p><p id="message"></p></div></main><script src="js/api.js"></script><script src="js/document.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document · VitalSync</title>
+    <link rel="stylesheet" href="css/global.css">
+  </head>
+  <body>
+    <header>
+      <div class="topbar">
+        <div class="brand">
+          <div class="brand-mark">V</div>
+          <span>VitalSync</span>
+        </div>
+        <nav>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="documents.html">Documents</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="card-header" style="align-items:flex-start;">
+          <div>
+            <p class="muted" style="margin:0 0 0.45rem; text-transform:uppercase; letter-spacing:0.08em; font-size:0.72rem; font-weight:700;">Document details</p>
+            <h1 id="name" style="margin:0;">Document</h1>
+          </div>
+        </div>
+
+        <div id="detail" class="detail-grid"></div>
+
+        <div class="toolbar" style="margin-top:1.4rem;">
+          <div class="list-inline">
+            <a id="view" class="button" target="_blank">View document</a>
+            <button class="danger" id="request" type="button">Request deletion</button>
+          </div>
+        </div>
+
+        <p id="message"></p>
+      </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/document.js"></script>
+  </body>
+</html>
+

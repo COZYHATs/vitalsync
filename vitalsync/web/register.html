@@ -1,1 +1,64 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Register · VitalSync</title><link rel="stylesheet" href="css/global.css"></head><body><main style="max-width:420px"><h1>VitalSync</h1><div class="card"><h2>Create account</h2><form data-action="register"><label>Email<input name="email" type="email" required></label><label>Password <span class="muted">(12+ characters)</span><input name="password" type="password" minlength="12" required></label><p id="message"></p><button>Create account</button></form><p class="muted">Already registered? <a href="login.html">Sign in</a></p></div></main><script src="js/api.js"></script><script src="js/auth.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register · VitalSync</title>
+    <link rel="stylesheet" href="css/global.css">
+  </head>
+  <body>
+    <div class="auth-shell">
+      <div class="auth-layout">
+        <section class="auth-copy">
+          <div class="brand">
+            <div class="brand-mark">V</div>
+            <span>VitalSync</span>
+          </div>
+          <div>
+            <h1>Start with a secure workspace.</h1>
+            <p>Create your account to organize patient records and keep document review workflows centralized.</p>
+          </div>
+          <div class="feature-stack">
+            <div class="feature-item">
+              <div class="brand-mark" style="width:2rem;height:2rem; font-size:0.9rem;">#</div>
+              <div>
+                <strong>Structured records</strong>
+                <span>Track each patient, uploaded file, and related processing status with clarity.</span>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="brand-mark" style="width:2rem;height:2rem; font-size:0.9rem;">!</div>
+              <div>
+                <strong>Guarded actions</strong>
+                <span>Deletion workflows are intentional and reviewed before changes are finalized.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="auth-panel">
+          <div class="form-card">
+            <h1 style="margin:0 0 1rem; font-size: clamp(1.8rem, 3vw, 2.4rem);">Create account</h1>
+            <form data-action="register">
+              <label>Email
+                <input name="email" type="email" required placeholder="you@example.com">
+              </label>
+              <label>Password <span class="muted">(12+ characters)</span>
+                <input name="password" type="password" minlength="12" required placeholder="Choose a strong password">
+              </label>
+              <p id="message"></p>
+              <div class="form-actions">
+                <button type="submit">Create account</button>
+                <span class="inline-note">Already registered? <a href="login.html">Sign in</a></span>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
+
